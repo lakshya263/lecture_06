@@ -14,6 +14,8 @@ class ForegroundService : Service() {
     override fun onCreate() {
         super.onCreate()
 
+        createNotificationChannel()
+
         startForeground(
             123,
             buildNotification("this is a test foreground service")
